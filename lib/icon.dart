@@ -7,23 +7,23 @@ class IconWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            IconButton(
-                onPressed: () =>
-                    Navigator.pushReplacementNamed(context, '/ElevatedButton'),
-                icon: const Icon(Icons.arrow_back)),
-            IconButton(
-                onPressed: () =>
-                    Navigator.pushReplacementNamed(context, '/Image'),
-                icon: const Icon(Icons.arrow_right_alt_outlined))
-          ],
-        ),
+        actions: [
+          IconButton(
+              onPressed: () =>
+                  Navigator.pushReplacementNamed(context, '/Image'),
+              icon: const Icon(Icons.arrow_right_alt_outlined))
+        ],
+        leading: IconButton(
+            onPressed: () =>
+                Navigator.pushReplacementNamed(context, '/ElevatedButton'),
+            icon: const Icon(Icons.arrow_back)),
       ),
       body: Center(
         child: Column(
           children: [
+            const SizedBox(
+              height: 20,
+            ),
             const Text('Ini adalah contoh dari Icons'),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,

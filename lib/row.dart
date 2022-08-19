@@ -17,13 +17,16 @@ class RowWidget extends StatelessWidget {
           ],
         ),
       ),
-      body: Row(
-        children: const [
-          Text('Ini'),
-          Text('Adalah'),
-          Text('Contoh'),
-          Text('Row'),
-        ],
+      body: Center(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: const [
+            Text('Ini'),
+            Text('Adalah'),
+            Text('Contoh'),
+            Text('Row'),
+          ],
+        ),
       ),
     );
   }

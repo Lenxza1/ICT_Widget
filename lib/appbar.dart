@@ -7,11 +7,25 @@ class AppbarWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Ini Adalah Text yang ada pada appbar'),
+        title: const Text('Appbar'),
         centerTitle: true,
-        leading: IconButton(
-            onPressed: () => Navigator.pushNamed(context, '/Body'),
-            icon: const Icon(Icons.arrow_right_alt_outlined)),
+        actions: [
+          IconButton(
+              onPressed: () => Navigator.pushNamed(context, '/Body'),
+              icon: const Icon(Icons.arrow_right_alt_outlined)),
+        ],
+        automaticallyImplyLeading: false,
+      ),
+      body: Column(
+        children: const [
+          SizedBox(
+            height: 10,
+          ),
+          Center(
+            child: Icon(Icons.arrow_upward_outlined),
+          ),
+          Text('Ini adalah Appbar')
+        ],
       ),
     );
   }
